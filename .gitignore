@@ -1,0 +1,14 @@
+venv/
+__pycache__/
+*.pyc
+
+results/
+debug_pipeline/
+
+*.png
+*.jpg
+
+*.pth
+*.zip
+
+.env
