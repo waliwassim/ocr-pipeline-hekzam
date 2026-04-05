@@ -494,9 +494,47 @@ def rasteriser_pdf(chemin_pdf: str) -> dict:
         )
     print(f"Rasterisation du PDF à {PDF_DPI} DPI...")
     pages = {}
-    for i, page in enumerate(convert_from_path(chemin_pdf, dpi=PDF_DPI), start=1):
+    import platform
+    if platform.system() == "Windows":
+        import os as _os
+        _os.environ["PATH"] += _os.pathsep + POPPLER_PATH_WINDOWS
+        _pages = convert_from_path(chemin_pdf, dpi=PDF_DPI, poppler_path=POPPLER_PATH_WINDOWS)
+    else:
+        _pages = convert_from_path(chemin_pdf, dpi=PDF_DPI)
+    for i, page in enumerate(_pages, start=1):
         pages[i] = np.array(page.convert("L"))
         print(f"  Page {i} : {pages[i].shape[1]}×{pages[i].shape[0]} px")
+    return pages
+
+
+def lire_images_png(dossier_images: str) -> dict:
+    """
+    Charge les images PNG corrigées depuis le dossier produit par
+    correction_distorsion.py, en remplacement de rasteriser_pdf().
+
+    Les fichiers doivent être nommés page_001.png, page_002.png, etc.
+    Retourne un dict {numero_page: image_numpy_gris}.
+    """
+    import re
+    pages = {}
+    fichiers = sorted([
+        f for f in os.listdir(dossier_images)
+        if f.lower().endswith(".png")
+    ])
+    if not fichiers:
+        raise FileNotFoundError(f"Aucun PNG trouvé dans : {dossier_images}")
+
+    print(f"Chargement des images corrigées depuis : {dossier_images}")
+    for f in fichiers:
+        match = re.search(r'(\d+)', f)
+        num = int(match.group(1)) if match else len(pages) + 1
+        chemin = os.path.join(dossier_images, f)
+        img = cv2.imread(chemin, cv2.IMREAD_GRAYSCALE)
+        if img is not None:
+            pages[num] = img
+            print(f"  Page {num} : {img.shape[1]}×{img.shape[0]} px  ({f})")
+        else:
+            print(f"  [WARN] Impossible de lire : {f}")
     return pages
 
 
@@ -557,9 +595,14 @@ def transformer_point_mm_vers_px(pt_mm, H):
     p2 = cv2.perspectiveTransform(p, H)
     x, y = p2[0, 0]
     return [int(round(x)), int(round(y))]
-def executer_pipeline(chemin_pdf: str, chemin_json: str, debug: bool = False):
-    print(f"\n[OCR Pipeline] PDF  : {chemin_pdf}")
-    print(f"[OCR Pipeline] JSON : {chemin_json}\n")
+def executer_pipeline(chemin_json: str, chemin_pdf: str = None,
+                      dossier_images: str = None, debug: bool = False):
+    """
+    chemin_json    : JSON des coins (cases.json)
+    chemin_pdf     : PDF scanné (utilisé si dossier_images absent)
+    dossier_images : dossier PNG de correction_distorsion.py (prioritaire sur le PDF)
+    """
+    print(f"\n[OCR Pipeline] JSON : {chemin_json}")
 
     with open(chemin_json, "r", encoding="utf-8") as f:
         cases = json.load(f)
@@ -570,7 +613,15 @@ def executer_pipeline(chemin_pdf: str, chemin_json: str, debug: bool = False):
         c.setdefault("page", 1)
         c.setdefault("coins", {"tl": None, "tr": None, "bl": None, "br": None})
 
-    pages = rasteriser_pdf(chemin_pdf)
+    # ── Chargement des pages ──
+    if dossier_images:
+        print(f"[OCR Pipeline] Images : {dossier_images} (PNG corrigés)\n")
+        pages = lire_images_png(dossier_images)
+    elif chemin_pdf:
+        print(f"[OCR Pipeline] PDF  : {chemin_pdf}\n")
+        pages = rasteriser_pdf(chemin_pdf)
+    else:
+        raise ValueError("Il faut fournir --images ou --pdf")
 
     # Calcul de l'homographie sur la première page
     H_mm_to_px = calculer_homographie_mm_vers_px(pages[1])
@@ -700,36 +751,55 @@ def executer_demo():
 # CLI
 # ─────────────────────────────────────────────────────────────────────────────
 
-if __name__ == "__main__":
+def main():
+    global OUTPUT_DIR, DEBUG_DIR, RESULTS_FILE
     parser = argparse.ArgumentParser(
         description="Pipeline OCR Hekzam — gestion des coins partiels"
     )
-    parser.add_argument("--pdf",   help="Fichier PDF scanné")
-    parser.add_argument("--json",  help="JSON des coordonnées (collègue 1)")
-    parser.add_argument("--debug", action="store_true",
+    parser.add_argument("--images", help="Dossier PNG corrigés (sortie de correction_distorsion.py) — PRIORITAIRE sur --pdf")
+    parser.add_argument("--pdf",    help="Fichier PDF scanné (utilisé si --images absent)")
+    parser.add_argument("--json",   help="JSON des coordonnées des cases")
+    parser.add_argument("--debug",  action="store_true",
                         help="Sauvegarde les étapes dans ./debug_pipeline/")
-    parser.add_argument("--demo",  action="store_true",
+    parser.add_argument("--demo",   action="store_true",
                         help="Test sur données synthétiques")
     args = parser.parse_args()
 
     if args.demo:
         executer_demo()
-    elif args.pdf and args.json:
-        pdf_name = os.path.splitext(os.path.basename(args.pdf))[0]
+    elif args.json and (args.images or args.pdf):
 
-        OUTPUT_DIR = os.path.join("results", pdf_name, "cases_hekzam")
-        DEBUG_DIR = os.path.join("results", pdf_name, "debug_pipeline")
+        # Nom de base pour les dossiers de sortie
+        if args.images:
+            # ex: scans_corriges/2e-r-0 → "2e-r-0"
+            pdf_name = os.path.basename(os.path.normpath(args.images))
+        else:
+            pdf_name = os.path.splitext(os.path.basename(args.pdf))[0]
+
+        OUTPUT_DIR   = os.path.join("results", pdf_name, "cases_hekzam")
+        DEBUG_DIR    = os.path.join("results", pdf_name, "debug_pipeline")
         RESULTS_FILE = os.path.join("results", pdf_name, "results.json")
 
         os.makedirs(OUTPUT_DIR, exist_ok=True)
-        os.makedirs(DEBUG_DIR, exist_ok=True)
+        os.makedirs(DEBUG_DIR,  exist_ok=True)
 
         print(f"\n[INFO] Dossier de sortie : {OUTPUT_DIR}")
-        print(f"[INFO] Dossier debug   : {DEBUG_DIR}")
-        print(f"[INFO] Fichier résumé  : {RESULTS_FILE}\n")
+        print(f"[INFO] Dossier debug     : {DEBUG_DIR}")
+        print(f"[INFO] Fichier résumé    : {RESULTS_FILE}\n")
 
-        executer_pipeline(args.pdf, args.json, debug=args.debug)
+        executer_pipeline(
+            chemin_json    = args.json,
+            chemin_pdf     = args.pdf,
+            dossier_images = args.images,
+            debug          = args.debug
+        )
     else:
         parser.print_help()
-        print("\n  Exemple : python pipeline_ocr.py --pdf scan.pdf --json cases.json")
+        print("\n  Exemple avec images corrigées (recommandé) :")
+        print("    python pipeline_ocr.py --images scans_corriges/2e-r-0/ --json cases.json")
+        print("  Exemple avec PDF :")
+        print("    python pipeline_ocr.py --pdf scan.pdf --json cases.json")
         print("  Démo    : python pipeline_ocr.py --demo\n")
+
+if __name__ == "__main__":
+    main()  

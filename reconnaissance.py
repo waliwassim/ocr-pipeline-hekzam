@@ -4,8 +4,6 @@ import torch.nn.functional as F
 from torchvision import transforms
 from PIL import Image
 import os
-import json
-import numpy as np
 
 
 class STN_LeNet(nn.Module):
@@ -44,6 +42,7 @@ class STN_LeNet(nn.Module):
             nn.ReLU(),
             nn.Linear(84, 10)
         )
+
     def stn(self, x):
         xs = self.localization(x)
         xs = xs.view(-1, 10 * 3 * 3)
@@ -52,6 +51,7 @@ class STN_LeNet(nn.Module):
         grid = F.affine_grid(theta, x.size(), align_corners=False)
         x = F.grid_sample(x, grid, align_corners=False)
         return x
+
     def forward(self, x):
         x = self.stn(x)
         x = self.conv_layers(x)
@@ -59,7 +59,7 @@ class STN_LeNet(nn.Module):
         return x
 
 
-
+# --- Prétraitement ---
 transform = transforms.Compose([
     transforms.Grayscale(),
     transforms.Resize((28, 28)),
@@ -67,88 +67,52 @@ transform = transforms.Compose([
     transforms.Normalize((0.1307,), (0.3081,))
 ])
 
-
+# --- Charger le modèle ---
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = STN_LeNet().to(device)
-model.load_state_dict(torch.load("stn_lenet_mnist.pth", map_location=device))
+model  = STN_LeNet().to(device)
+model.load_state_dict(torch.load("stn_hekzam.pth", map_location=device))
 model.eval()
+print("Modèle Hekzam chargé !")
 
 
+# --- Reconnaître un chiffre ---
 def reconnaitre_chiffre(chemin_image):
     image = Image.open(chemin_image)
     image = transform(image).unsqueeze(0).to(device)
     with torch.no_grad():
         output = model(image)
-        proba = torch.softmax(output, dim=1)
-        chiffre = torch.argmax(proba).item()
+        proba  = torch.softmax(output, dim=1)
+        chiffre   = torch.argmax(proba).item()
         confiance = proba[0][chiffre].item() * 100
     return chiffre, confiance
 
 
-def afficher_matrice_confusion(y_vrai, y_pred):
+# --- Reconnaître tout un dossier ---
+def reconnaitre_dossier(dossier):
     """
-    Affiche la matrice de confusion 10×10 et l'accuracy en console.
-    y_vrai / y_pred : listes d'entiers 0-9.
+    Reconnaît tous les chiffres du dossier, sauvegarde les prédictions
+    dans results.json, et affiche la matrice de confusion + accuracy
+    si labels.json est présent.
     """
-    classes = list(range(10))
-    n = len(classes)
+    import json
+    import numpy as np
 
-    # Matrice de confusion
-    matrice = np.zeros((n, n), dtype=int)
-    for vrai, pred in zip(y_vrai, y_pred):
-        matrice[vrai][pred] += 1
-
-    accuracy = np.trace(matrice) / matrice.sum() * 100 if matrice.sum() > 0 else 0.0
-
-    print("\n" + "=" * 60)
-    print("  MATRICE DE CONFUSION")
-    print("=" * 60)
-
-    # En-tête colonnes (prédictions)
-    header = "       " + "  ".join(f"P{c}" for c in classes)
-    print(header)
-    print("       " + "───" * n)
-
-    for i in classes:
-        ligne = f"  R{i} │ " + "  ".join(
-            f"\033[92m{matrice[i][j]:2d}\033[0m" if i == j else f"{matrice[i][j]:2d}"
-            for j in classes
-        )
-        print(ligne)
-
-    print("=" * 60)
-    print(f"  Accuracy : {accuracy:.2f}%  ({np.trace(matrice)}/{matrice.sum()} bien classés)")
-    print("=" * 60 + "\n")
-
-    return matrice, accuracy
-
-
-def reconnaitre_dossier(dossier, labels_json=None):
-    """
-    Parcourt le dossier, reconnaît chaque chiffre, puis affiche la matrice
-    de confusion et l'accuracy si des labels ground-truth sont disponibles.
-
-    labels_json (optionnel) : chemin vers un fichier JSON de la forme
-        {"c1": 3, "c2": 7, ...}   (id de case → chiffre attendu)
-    Si absent, cherche automatiquement 'labels.json' dans le même dossier.
-    """
     print(f"\nReconnaissance des chiffres dans : {dossier}")
     print("-" * 40)
 
-    # Chargement des labels ground-truth (optionnel)
-    if labels_json is None:
-        chemin_labels = os.path.join(dossier, "labels.json")
-        labels_json = chemin_labels if os.path.exists(chemin_labels) else None
-
+    # ── Chargement des labels ground truth (optionnel) ──
+    chemin_labels = os.path.join(dossier, "labels.json")
     labels = {}
-    if labels_json and os.path.exists(labels_json):
-        with open(labels_json, "r", encoding="utf-8") as f:
+    if os.path.exists(chemin_labels):
+        with open(chemin_labels, "r", encoding="utf-8") as f:
             labels = json.load(f)
-        print(f"  Labels ground-truth chargés : {len(labels)} entrées ({labels_json})")
+        print(f"  Labels ground-truth chargés : {len(labels)} entrées\n")
     else:
-        print("  (Pas de labels.json — matrice de confusion non disponible)")
+        print("  (Pas de labels.json — matrice de confusion non disponible)\n")
 
-    predictions = {}   # id_case → chiffre_prédit
+    # ── Reconnaissance ──
+    predictions = {}   # case_id → chiffre_prédit
+    confidences = {}   # case_id → confiance
 
     for fichier in sorted(os.listdir(dossier)):
         if not fichier.endswith(('.png', '.jpg', '.jpeg')):
@@ -156,39 +120,120 @@ def reconnaitre_dossier(dossier, labels_json=None):
 
         chemin = os.path.join(dossier, fichier)
 
-        # Ignorer les images quasi vides
-        img = Image.open(chemin).convert("L")
+        # Ignorer les images vides
+        from PIL import Image as PILImage
+        img = PILImage.open(chemin).convert("L")
         if sum(img.getdata()) < 50:
-            print(f"{fichier} → image vide ignorée")
+            print(f"  {fichier} → image vide ignorée")
             continue
 
         chiffre, confiance = reconnaitre_chiffre(chemin)
 
-        # Extraire l'id de case depuis le nom de fichier (ex: case_c12.png → c12)
+        # Extraire l'id de case depuis le nom (case_c12.png → c12)
         nom_sans_ext = os.path.splitext(fichier)[0]
         case_id = nom_sans_ext.replace("case_", "", 1)
         predictions[case_id] = chiffre
+        confidences[case_id] = confiance
 
-        # Indicateur ✓/✗ si on a le label
+        # Indicateur ✓/✗ si label connu
         indicateur = ""
         if case_id in labels:
             indicateur = " ✓" if chiffre == labels[case_id] else f" ✗ (attendu: {labels[case_id]})"
 
-        print(f"{fichier} → Chiffre reconnu : {chiffre}  (confiance : {confiance:.1f}%){indicateur}")
+        print(f"  {fichier} → {chiffre}  ({confiance:.1f}%){indicateur}")
 
-    # ── Matrice de confusion et accuracy ──
+    # ── Sauvegarde dans results.json ──
+    chemin_results = os.path.join(os.path.dirname(dossier), "results.json")
+    resultats_json = []
+    if os.path.exists(chemin_results):
+        with open(chemin_results, "r", encoding="utf-8") as f:
+            resultats_json = json.load(f)
+
+    # Enrichir chaque entrée avec chiffre_predit, confiance et label_reel
+    for r in resultats_json:
+        case_id = r["id"].replace("case_", "", 1) if r["id"].startswith("case_") else r["id"]
+        pred = predictions.get(case_id) or predictions.get(r["id"])
+        conf = confidences.get(case_id) or confidences.get(r["id"])
+        if pred is not None:
+            r["chiffre_predit"] = pred
+            r["confiance"]      = round(conf, 1)
+        # Ajouter le label réel si disponible
+        if case_id in labels:
+            r["label_reel"] = labels[case_id]
+
+    # ── Calculer accuracy globale et la stocker dans le premier élément ──
+    ids_communs = [k for k in predictions if k in labels]
+    accuracy = None
+    if ids_communs:
+        correct = sum(1 for k in ids_communs if predictions[k] == labels[k])
+        accuracy = round(correct / len(ids_communs) * 100, 2)
+        # Stocker l'accuracy dans results.json (sur le premier élément)
+        if resultats_json:
+            resultats_json[0]["accuracy"] = accuracy
+
+    with open(chemin_results, "w", encoding="utf-8") as f:
+        json.dump(resultats_json, f, ensure_ascii=False, indent=2)
+    print(f"\n  Prédictions sauvegardées → {chemin_results}")
+
+    # ── Matrice de confusion + accuracy ──
     if labels:
         ids_communs = [k for k in predictions if k in labels]
         if ids_communs:
             y_vrai = [labels[k]      for k in ids_communs]
             y_pred = [predictions[k] for k in ids_communs]
-            afficher_matrice_confusion(y_vrai, y_pred)
+
+            n = 10
+            matrice = np.zeros((n, n), dtype=int)
+            for vrai, pred in zip(y_vrai, y_pred):
+                if 0 <= vrai < n and 0 <= pred < n:
+                    matrice[vrai][pred] += 1
+
+            accuracy = np.trace(matrice) / matrice.sum() * 100 if matrice.sum() > 0 else 0.0
+
+            print(f"\n{'='*60}")
+            print(f"  MATRICE DE CONFUSION")
+            print(f"{'='*60}")
+            header = "       " + "  ".join(f"P{c}" for c in range(n))
+            print(header)
+            print("       " + "───" * n)
+            for i in range(n):
+                ligne = f"  R{i} │ " + "  ".join(
+                    f"\033[92m{matrice[i][j]:2d}\033[0m" if i == j else f"{matrice[i][j]:2d}"
+                    for j in range(n)
+                )
+                print(ligne)
+            print(f"{'='*60}")
+            print(f"  Accuracy : {accuracy:.2f}%  ({int(np.trace(matrice))}/{int(matrice.sum())} bien classés)")
+            print(f"{'='*60}\n")
         else:
-            print("\n  Aucune correspondance entre les ids prédits et les labels — vérifiez labels.json.")
+            print("\n  Aucune correspondance ids prédits / labels.")
     else:
-        print(f"\n  {len(predictions)} case(s) traitée(s). Fournissez labels.json pour la matrice de confusion.\n")
+        print(f"\n  {len(predictions)} case(s) traitée(s). Ajoutez labels.json pour la matrice.\n")
 
     return predictions
 
 
-reconnaitre_dossier("results/1e-r-0/cases_hekzam")
+# --- LANCER ---
+import argparse
+import os
+
+parser = argparse.ArgumentParser(description="Reconnaissance STN-LeNet — Projet Hekzam")
+parser.add_argument("--dossier", default=None,
+                    help="Dossier des cases PNG (ex: results/2e-r-0/cases_hekzam)")
+parser.add_argument("--pdf",     default=None,
+                    help="Nom du PDF traité (ex: 2e-r-0) pour construire le chemin automatiquement")
+args = parser.parse_args()
+
+if args.dossier:
+    dossier = args.dossier
+elif args.pdf:
+    pdf_name = os.path.splitext(os.path.basename(args.pdf))[0]
+    dossier  = os.path.join("results", pdf_name, "cases_hekzam")
+else:
+    # Chemin par défaut : cherche le dossier results/ le plus récent
+    dossier = "results/2e-r-0/cases_hekzam"
+    print(f"[INFO] Aucun argument fourni — dossier par défaut : {dossier}")
+    print(f"[INFO] Usage : python reconnaissance.py --pdf 2e-r-0.pdf")
+    print(f"[INFO]      ou: python reconnaissance.py --dossier results/2e-r-0/cases_hekzam\n")
+
+reconnaitre_dossier(dossier)

@@ -1,0 +1,162 @@
+[
+  {
+    "pdf": "1e-r-0",
+    "statut": "ok",
+    "duree_ocr": 50.7,
+    "durees": {
+      "correction": 19.7,
+      "detection": 10.6,
+      "conversion": 4.0,
+      "pipeline": 16.2
+    },
+    "dossier_cases": "results\\1e-r-0\\cases_hekzam",
+    "cases_json": "results\\1e-r-0\\cases.json",
+    "results_json": "results\\1e-r-0\\results.json",
+    "etapes": {
+      "correction": true,
+      "detection": true,
+      "conv_page1": true,
+      "conv_page2": true,
+      "conv_page3": true,
+      "conv_page4": true,
+      "conv_page5": true,
+      "conv_page6": true,
+      "conv_page7": true,
+      "conv_page8": true,
+      "conv_page9": true,
+      "conv_page10": true,
+      "pipeline": true
+    },
+    "accuracy": 60.83,
+    "duree_reco": 21.4,
+    "reconnaissance_ok": true
+  },
+  {
+    "pdf": "1e-r-1",
+    "statut": "ok",
+    "duree_ocr": 65.1,
+    "durees": {
+      "correction": 24.1,
+      "detection": 16.6,
+      "conversion": 8.4,
+      "pipeline": 15.8
+    },
+    "dossier_cases": "results\\1e-r-1\\cases_hekzam",
+    "cases_json": "results\\1e-r-1\\cases.json",
+    "results_json": "results\\1e-r-1\\results.json",
+    "etapes": {
+      "correction": true,
+      "detection": true,
+      "conv_page1": true,
+      "conv_page2": true,
+      "conv_page3": true,
+      "conv_page4": true,
+      "conv_page5": true,
+      "conv_page6": true,
+      "conv_page7": true,
+      "conv_page8": true,
+      "conv_page9": true,
+      "conv_page10": true,
+      "pipeline": true
+    },
+    "accuracy": 53.33,
+    "duree_reco": 16.9,
+    "reconnaissance_ok": true
+  },
+  {
+    "pdf": "1e-r-2",
+    "statut": "ok",
+    "duree_ocr": 56.8,
+    "durees": {
+      "correction": 21.4,
+      "detection": 14.5,
+      "conversion": 3.9,
+      "pipeline": 16.9
+    },
+    "dossier_cases": "results\\1e-r-2\\cases_hekzam",
+    "cases_json": "results\\1e-r-2\\cases.json",
+    "results_json": "results\\1e-r-2\\results.json",
+    "etapes": {
+      "correction": true,
+      "detection": true,
+      "conv_page1": true,
+      "conv_page2": true,
+      "conv_page3": true,
+      "conv_page4": true,
+      "conv_page5": true,
+      "conv_page6": true,
+      "conv_page7": true,
+      "conv_page8": true,
+      "conv_page9": true,
+      "conv_page10": true,
+      "pipeline": true
+    },
+    "accuracy": 56.2,
+    "duree_reco": 18.6,
+    "reconnaissance_ok": true
+  },
+  {
+    "pdf": "1e-rv-0",
+    "statut": "ok",
+    "duree_ocr": 38.8,
+    "durees": {
+      "correction": 13.0,
+      "detection": 7.7,
+      "conversion": 3.0,
+      "pipeline": 14.9
+    },
+    "dossier_cases": "results\\1e-rv-0\\cases_hekzam",
+    "cases_json": "results\\1e-rv-0\\cases.json",
+    "results_json": "results\\1e-rv-0\\results.json",
+    "etapes": {
+      "correction": true,
+      "detection": true,
+      "conv_page1": true,
+      "conv_page2": true,
+      "conv_page3": true,
+      "conv_page4": true,
+      "conv_page5": true,
+      "conv_page6": true,
+      "conv_page7": true,
+      "conv_page8": true,
+      "conv_page9": true,
+      "conv_page10": true,
+      "pipeline": true
+    },
+    "accuracy": 56.67,
+    "duree_reco": 16.8,
+    "reconnaissance_ok": true
+  },
+  {
+    "pdf": "1e-rv-1",
+    "statut": "ok",
+    "duree_ocr": 48.7,
+    "durees": {
+      "correction": 16.8,
+      "detection": 12.8,
+      "conversion": 3.7,
+      "pipeline": 15.2
+    },
+    "dossier_cases": "results\\1e-rv-1\\cases_hekzam",
+    "cases_json": "results\\1e-rv-1\\cases.json",
+    "results_json": "results\\1e-rv-1\\results.json",
+    "etapes": {
+      "correction": true,
+      "detection": true,
+      "conv_page1": true,
+      "conv_page2": true,
+      "conv_page3": true,
+      "conv_page4": true,
+      "conv_page5": true,
+      "conv_page6": true,
+      "conv_page7": true,
+      "conv_page8": true,
+      "conv_page9": true,
+      "conv_page10": true,
+      "pipeline": true
+    },
+    "accuracy": 50.0,
+    "duree_reco": 16.7,
+    "reconnaissance_ok": true
+  }
+]
