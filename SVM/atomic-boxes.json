@@ -1,0 +1,1372 @@
+{
+  "marker barcode tl page1": {
+    "page": 1,
+    "x": 10.0,
+    "y": 10.0,
+    "width": 12.5,
+    "height": 12.5,
+    "stroke-width": 0.0,
+    "stroke-color": "#000000",
+    "fill-color": "#ffffff"
+  },
+  "marker barcode tr page1": {
+    "page": 1,
+    "x": 187.5,
+    "y": 10.0,
+    "width": 12.5,
+    "height": 12.5,
+    "stroke-width": 0.0,
+    "stroke-color": "#000000",
+    "fill-color": "#ffffff"
+  },
+  "id-0-0-0": {
+    "page": 1,
+    "x": 10.0,
+    "y": 25.0,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-0-1-9": {
+    "page": 1,
+    "x": 16.0,
+    "y": 25.0,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-0-2-4": {
+    "page": 1,
+    "x": 22.0,
+    "y": 25.0,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-0-3-3": {
+    "page": 1,
+    "x": 28.0,
+    "y": 25.0,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-0-4-2": {
+    "page": 1,
+    "x": 34.0,
+    "y": 25.0,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-0-5-4": {
+    "page": 1,
+    "x": 40.0,
+    "y": 25.0,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-0-6-8": {
+    "page": 1,
+    "x": 46.0,
+    "y": 25.0,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-1-0-7": {
+    "page": 1,
+    "x": 76.5,
+    "y": 25.0,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#dfdfdf",
+    "fill-color": "#ffffff"
+  },
+  "id-1-1-0": {
+    "page": 1,
+    "x": 82.5,
+    "y": 25.0,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#dfdfdf",
+    "fill-color": "#ffffff"
+  },
+  "id-1-2-1": {
+    "page": 1,
+    "x": 88.5,
+    "y": 25.0,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#dfdfdf",
+    "fill-color": "#ffffff"
+  },
+  "id-1-3-3": {
+    "page": 1,
+    "x": 94.5,
+    "y": 25.0,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#dfdfdf",
+    "fill-color": "#ffffff"
+  },
+  "id-1-4-4": {
+    "page": 1,
+    "x": 100.5,
+    "y": 25.0,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#dfdfdf",
+    "fill-color": "#ffffff"
+  },
+  "id-2-0-7": {
+    "page": 1,
+    "x": 143.0,
+    "y": 25.0,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#707070",
+    "fill-color": "#ffffff"
+  },
+  "id-2-1-6": {
+    "page": 1,
+    "x": 149.0,
+    "y": 25.0,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#707070",
+    "fill-color": "#ffffff"
+  },
+  "id-2-2-2": {
+    "page": 1,
+    "x": 155.0,
+    "y": 25.0,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#707070",
+    "fill-color": "#ffffff"
+  },
+  "id-2-3-5": {
+    "page": 1,
+    "x": 161.0,
+    "y": 25.0,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#707070",
+    "fill-color": "#ffffff"
+  },
+  "id-2-4-8": {
+    "page": 1,
+    "x": 167.0,
+    "y": 25.0,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#707070",
+    "fill-color": "#ffffff"
+  },
+  "id-3-0-0": {
+    "page": 1,
+    "x": 10.0,
+    "y": 54.43082430555556,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#707070",
+    "fill-color": "#ffffff"
+  },
+  "id-3-1-8": {
+    "page": 1,
+    "x": 16.0,
+    "y": 54.43082430555556,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#707070",
+    "fill-color": "#ffffff"
+  },
+  "id-3-2-6": {
+    "page": 1,
+    "x": 22.0,
+    "y": 54.43082430555556,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#707070",
+    "fill-color": "#ffffff"
+  },
+  "id-3-3-6": {
+    "page": 1,
+    "x": 28.0,
+    "y": 54.43082430555556,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#707070",
+    "fill-color": "#ffffff"
+  },
+  "id-3-4-4": {
+    "page": 1,
+    "x": 34.0,
+    "y": 54.43082430555556,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#707070",
+    "fill-color": "#ffffff"
+  },
+  "id-3-5-3": {
+    "page": 1,
+    "x": 40.0,
+    "y": 54.43082430555556,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#707070",
+    "fill-color": "#ffffff"
+  },
+  "id-4-0-2": {
+    "page": 1,
+    "x": 76.5,
+    "y": 54.43082430555556,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#707070",
+    "fill-color": "#ffffff"
+  },
+  "id-4-1-9": {
+    "page": 1,
+    "x": 82.5,
+    "y": 54.43082430555556,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#707070",
+    "fill-color": "#ffffff"
+  },
+  "id-4-2-4": {
+    "page": 1,
+    "x": 88.5,
+    "y": 54.43082430555556,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#707070",
+    "fill-color": "#ffffff"
+  },
+  "id-5-0-5": {
+    "page": 1,
+    "x": 143.0,
+    "y": 54.43082430555556,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#404040",
+    "fill-color": "#ffffff"
+  },
+  "id-5-1-1": {
+    "page": 1,
+    "x": 149.0,
+    "y": 54.43082430555556,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#404040",
+    "fill-color": "#ffffff"
+  },
+  "id-6-0-6": {
+    "page": 1,
+    "x": 10.0,
+    "y": 83.86164861111112,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-7-0-1": {
+    "page": 1,
+    "x": 76.5,
+    "y": 83.86164861111112,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#cfcfcf",
+    "fill-color": "#ffffff"
+  },
+  "id-7-1-1": {
+    "page": 1,
+    "x": 82.5,
+    "y": 83.86164861111112,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#cfcfcf",
+    "fill-color": "#ffffff"
+  },
+  "id-8-0-0": {
+    "page": 1,
+    "x": 143.0,
+    "y": 83.86164861111112,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-8-1-7": {
+    "page": 1,
+    "x": 149.0,
+    "y": 83.86164861111112,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-8-2-7": {
+    "page": 1,
+    "x": 155.0,
+    "y": 83.86164861111112,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-9-0-5": {
+    "page": 1,
+    "x": 10.0,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-9-1-6": {
+    "page": 1,
+    "x": 16.0,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-9-2-3": {
+    "page": 1,
+    "x": 22.0,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-9-3-7": {
+    "page": 1,
+    "x": 28.0,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-9-4-8": {
+    "page": 1,
+    "x": 34.0,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-10-0-8": {
+    "page": 1,
+    "x": 76.5,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#8f8f8f",
+    "fill-color": "#ffffff"
+  },
+  "id-10-1-1": {
+    "page": 1,
+    "x": 82.5,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#8f8f8f",
+    "fill-color": "#ffffff"
+  },
+  "id-10-2-7": {
+    "page": 1,
+    "x": 88.5,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#8f8f8f",
+    "fill-color": "#ffffff"
+  },
+  "id-10-3-2": {
+    "page": 1,
+    "x": 94.5,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#8f8f8f",
+    "fill-color": "#ffffff"
+  },
+  "id-10-4-3": {
+    "page": 1,
+    "x": 100.5,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#8f8f8f",
+    "fill-color": "#ffffff"
+  },
+  "id-10-5-0": {
+    "page": 1,
+    "x": 106.5,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#8f8f8f",
+    "fill-color": "#ffffff"
+  },
+  "id-10-6-4": {
+    "page": 1,
+    "x": 112.5,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#8f8f8f",
+    "fill-color": "#ffffff"
+  },
+  "id-11-0-8": {
+    "page": 1,
+    "x": 143.0,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-11-1-8": {
+    "page": 1,
+    "x": 149.0,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-11-2-7": {
+    "page": 1,
+    "x": 155.0,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-11-3-2": {
+    "page": 1,
+    "x": 161.0,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-11-4-3": {
+    "page": 1,
+    "x": 167.0,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-11-5-3": {
+    "page": 1,
+    "x": 173.0,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-11-6-7": {
+    "page": 1,
+    "x": 179.0,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-11-7-0": {
+    "page": 1,
+    "x": 185.0,
+    "y": 113.29247291666667,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-12-0-4": {
+    "page": 1,
+    "x": 10.0,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-12-1-8": {
+    "page": 1,
+    "x": 16.0,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-12-2-5": {
+    "page": 1,
+    "x": 22.0,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-12-3-0": {
+    "page": 1,
+    "x": 28.0,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-12-4-5": {
+    "page": 1,
+    "x": 34.0,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-12-5-4": {
+    "page": 1,
+    "x": 40.0,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-12-6-7": {
+    "page": 1,
+    "x": 46.0,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-13-0-7": {
+    "page": 1,
+    "x": 76.5,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-13-1-1": {
+    "page": 1,
+    "x": 82.5,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-13-2-3": {
+    "page": 1,
+    "x": 88.5,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-13-3-6": {
+    "page": 1,
+    "x": 94.5,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-13-4-3": {
+    "page": 1,
+    "x": 100.5,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-14-0-2": {
+    "page": 1,
+    "x": 143.0,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#404040",
+    "fill-color": "#ffffff"
+  },
+  "id-14-1-5": {
+    "page": 1,
+    "x": 149.0,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#404040",
+    "fill-color": "#ffffff"
+  },
+  "id-14-2-4": {
+    "page": 1,
+    "x": 155.0,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#404040",
+    "fill-color": "#ffffff"
+  },
+  "id-14-3-2": {
+    "page": 1,
+    "x": 161.0,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#404040",
+    "fill-color": "#ffffff"
+  },
+  "id-14-4-2": {
+    "page": 1,
+    "x": 167.0,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#404040",
+    "fill-color": "#ffffff"
+  },
+  "id-14-5-0": {
+    "page": 1,
+    "x": 173.0,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#404040",
+    "fill-color": "#ffffff"
+  },
+  "id-14-6-7": {
+    "page": 1,
+    "x": 179.0,
+    "y": 142.72329722222224,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#404040",
+    "fill-color": "#ffffff"
+  },
+  "id-15-0-6": {
+    "page": 1,
+    "x": 10.0,
+    "y": 172.1541215277778,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#8f8f8f",
+    "fill-color": "#ffffff"
+  },
+  "id-16-0-3": {
+    "page": 1,
+    "x": 76.5,
+    "y": 172.1541215277778,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#dfdfdf",
+    "fill-color": "#ffffff"
+  },
+  "id-16-1-6": {
+    "page": 1,
+    "x": 82.5,
+    "y": 172.1541215277778,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#dfdfdf",
+    "fill-color": "#ffffff"
+  },
+  "id-16-2-9": {
+    "page": 1,
+    "x": 88.5,
+    "y": 172.1541215277778,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#dfdfdf",
+    "fill-color": "#ffffff"
+  },
+  "id-16-3-1": {
+    "page": 1,
+    "x": 94.5,
+    "y": 172.1541215277778,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#dfdfdf",
+    "fill-color": "#ffffff"
+  },
+  "id-17-0-7": {
+    "page": 1,
+    "x": 143.0,
+    "y": 172.1541215277778,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-17-1-2": {
+    "page": 1,
+    "x": 149.0,
+    "y": 172.1541215277778,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-17-2-1": {
+    "page": 1,
+    "x": 155.0,
+    "y": 172.1541215277778,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-17-3-2": {
+    "page": 1,
+    "x": 161.0,
+    "y": 172.1541215277778,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-18-0-6": {
+    "page": 1,
+    "x": 10.0,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#9f9f9f",
+    "fill-color": "#ffffff"
+  },
+  "id-18-1-3": {
+    "page": 1,
+    "x": 16.0,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#9f9f9f",
+    "fill-color": "#ffffff"
+  },
+  "id-18-2-7": {
+    "page": 1,
+    "x": 22.0,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#9f9f9f",
+    "fill-color": "#ffffff"
+  },
+  "id-19-0-3": {
+    "page": 1,
+    "x": 76.5,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-19-1-1": {
+    "page": 1,
+    "x": 82.5,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-19-2-3": {
+    "page": 1,
+    "x": 88.5,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-19-3-4": {
+    "page": 1,
+    "x": 94.5,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-19-4-7": {
+    "page": 1,
+    "x": 100.5,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-19-5-8": {
+    "page": 1,
+    "x": 106.5,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-19-6-8": {
+    "page": 1,
+    "x": 112.5,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-19-7-5": {
+    "page": 1,
+    "x": 118.5,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#101010",
+    "fill-color": "#ffffff"
+  },
+  "id-20-0-3": {
+    "page": 1,
+    "x": 143.0,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-20-1-7": {
+    "page": 1,
+    "x": 149.0,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-20-2-5": {
+    "page": 1,
+    "x": 155.0,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-20-3-3": {
+    "page": 1,
+    "x": 161.0,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-20-4-0": {
+    "page": 1,
+    "x": 167.0,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-20-5-2": {
+    "page": 1,
+    "x": 173.0,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-20-6-7": {
+    "page": 1,
+    "x": 179.0,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-20-7-6": {
+    "page": 1,
+    "x": 185.0,
+    "y": 201.58494583333336,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-21-0-2": {
+    "page": 1,
+    "x": 10.0,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-21-1-6": {
+    "page": 1,
+    "x": 16.0,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-21-2-3": {
+    "page": 1,
+    "x": 22.0,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-21-3-7": {
+    "page": 1,
+    "x": 28.0,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-21-4-3": {
+    "page": 1,
+    "x": 34.0,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-21-5-8": {
+    "page": 1,
+    "x": 40.0,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#606060",
+    "fill-color": "#ffffff"
+  },
+  "id-22-0-7": {
+    "page": 1,
+    "x": 76.5,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#afafaf",
+    "fill-color": "#ffffff"
+  },
+  "id-22-1-2": {
+    "page": 1,
+    "x": 82.5,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#afafaf",
+    "fill-color": "#ffffff"
+  },
+  "id-22-2-7": {
+    "page": 1,
+    "x": 88.5,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#afafaf",
+    "fill-color": "#ffffff"
+  },
+  "id-22-3-5": {
+    "page": 1,
+    "x": 94.5,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#afafaf",
+    "fill-color": "#ffffff"
+  },
+  "id-22-4-4": {
+    "page": 1,
+    "x": 100.5,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#afafaf",
+    "fill-color": "#ffffff"
+  },
+  "id-22-5-3": {
+    "page": 1,
+    "x": 106.5,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#afafaf",
+    "fill-color": "#ffffff"
+  },
+  "id-22-6-6": {
+    "page": 1,
+    "x": 112.5,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#afafaf",
+    "fill-color": "#ffffff"
+  },
+  "id-23-0-6": {
+    "page": 1,
+    "x": 143.0,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#404040",
+    "fill-color": "#ffffff"
+  },
+  "id-23-1-0": {
+    "page": 1,
+    "x": 149.0,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#404040",
+    "fill-color": "#ffffff"
+  },
+  "id-23-2-4": {
+    "page": 1,
+    "x": 155.0,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#404040",
+    "fill-color": "#ffffff"
+  },
+  "id-23-3-9": {
+    "page": 1,
+    "x": 161.0,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#404040",
+    "fill-color": "#ffffff"
+  },
+  "id-23-4-0": {
+    "page": 1,
+    "x": 167.0,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#404040",
+    "fill-color": "#ffffff"
+  },
+  "id-23-5-0": {
+    "page": 1,
+    "x": 173.0,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#404040",
+    "fill-color": "#ffffff"
+  },
+  "id-23-6-1": {
+    "page": 1,
+    "x": 179.0,
+    "y": 231.0157701388889,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#404040",
+    "fill-color": "#ffffff"
+  },
+  "id-24-0-9": {
+    "page": 1,
+    "x": 10.0,
+    "y": 260.4465944444445,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-24-1-2": {
+    "page": 1,
+    "x": 16.0,
+    "y": 260.4465944444445,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-24-2-6": {
+    "page": 1,
+    "x": 22.0,
+    "y": 260.4465944444445,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-24-3-1": {
+    "page": 1,
+    "x": 28.0,
+    "y": 260.4465944444445,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-24-4-4": {
+    "page": 1,
+    "x": 34.0,
+    "y": 260.4465944444445,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-24-5-8": {
+    "page": 1,
+    "x": 40.0,
+    "y": 260.4465944444445,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#808080",
+    "fill-color": "#ffffff"
+  },
+  "id-25-0-0": {
+    "page": 1,
+    "x": 76.5,
+    "y": 260.4465944444445,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#303030",
+    "fill-color": "#ffffff"
+  },
+  "id-25-1-1": {
+    "page": 1,
+    "x": 82.5,
+    "y": 260.4465944444445,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#303030",
+    "fill-color": "#ffffff"
+  },
+  "id-26-0-3": {
+    "page": 1,
+    "x": 143.0,
+    "y": 260.4465944444445,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#8f8f8f",
+    "fill-color": "#ffffff"
+  },
+  "id-26-1-6": {
+    "page": 1,
+    "x": 149.0,
+    "y": 260.4465944444445,
+    "width": 6.0,
+    "height": 8.0,
+    "stroke-width": 0.25,
+    "stroke-color": "#8f8f8f",
+    "fill-color": "#ffffff"
+  },
+  "marker barcode bl page1": {
+    "page": 1,
+    "x": 10.0,
+    "y": 274.5,
+    "width": 12.5,
+    "height": 12.5,
+    "stroke-width": 0.0,
+    "stroke-color": "#000000",
+    "fill-color": "#ffffff"
+  },
+  "marker barcode br page1": {
+    "page": 1,
+    "x": 187.5,
+    "y": 274.5,
+    "width": 12.5,
+    "height": 12.5,
+    "stroke-width": 0.0,
+    "stroke-color": "#000000",
+    "fill-color": "#ffffff"
+  },
+  "marker barcode tl page2": {
+    "page": 2,
+    "x": 10.0,
+    "y": 10.0,
+    "width": 12.5,
+    "height": 12.5,
+    "stroke-width": 0.0,
+    "stroke-color": "#000000",
+    "fill-color": "#ffffff"
+  },
+  "marker barcode tr page2": {
+    "page": 2,
+    "x": 187.5,
+    "y": 10.0,
+    "width": 12.5,
+    "height": 12.5,
+    "stroke-width": 0.0,
+    "stroke-color": "#000000",
+    "fill-color": "#ffffff"
+  }
+}
